@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Quiz Code</string>
+    <string name="start_learning">Impara ora</string>
+    <string name="quizzes">Quiz</string>
+    <string name="close_app">Chiudi l\'app</string>
+    <string name="choose_language">Scegli il linguaggio</string>
+    <string name="n_lessons">{n_lessons} lezioni</string>
+</resources>

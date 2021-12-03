@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quiz Code</string>
+    <string name="start_learning">Start learning</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="close_app">Close app</string>
+    <string name="choose_language">Choose language</string>
+    <string name="n_lessons">{n_lessons} lessons</string>
+</resources>
