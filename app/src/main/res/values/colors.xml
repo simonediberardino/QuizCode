@@ -9,8 +9,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightblue">#18C3FF</color>
     <color name="darkblue">#1881FF</color>
-    <color name="lightorange">#FF8F18</color>
-    <color name="darkorange">#FF7018</color>
+    <color name="lightorange">#ffa500</color>
+    <color name="darkorange">#ff8c00</color>
     <color name="lightyellow">#F0E68C</color>
     <color name= "gold">#FFD700</color>
     <color name="lightgreen">#74FF44</color>
