@@ -8,6 +8,8 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
+import androidx.constraintlayout.widget.ConstraintLayout
+import com.quiz.code.languages.java.JavaMain
 import java.util.*
 
 class LearnMain : CustomActivity() {
@@ -16,11 +18,7 @@ class LearnMain : CustomActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_learn_main)
         super.onPageLoaded()
-        addLanguage("Java", 0, MainActivity::class.java)
-        addLanguage("JavaScript", 0, MainActivity::class.java)
-        addLanguage("Java", 0, MainActivity::class.java)
-        addLanguage("JavaScript", 0, MainActivity::class.java)
-        addLanguage("Java", 0, MainActivity::class.java)
+        addLanguage("Java", 0, JavaMain::class.java)
         addLanguage("JavaScript", 0, MainActivity::class.java)
     }
 
@@ -34,6 +32,7 @@ class LearnMain : CustomActivity() {
         val view = inflater.inflate(layoutToAddId, gallery, false)
         val parentView = view.findViewById<ViewGroup>(parentViewId)
 
+        val languageBox = view.findViewById<ConstraintLayout>(R.id.language_box)
         val languageNameView = view.findViewById<TextView>(R.id.language_Name)
         val languageIconView = view.findViewById<ImageView>(R.id.language_Icon)
         val languageLessView = view.findViewById<TextView>(R.id.language_nLessons)
@@ -43,12 +42,9 @@ class LearnMain : CustomActivity() {
         languageNameView.setText(languageNameStr)
         languageIconView.setBackgroundResource(languageId)
         languageLessView.setText(getString(R.string.n_lessons).replace("{n_lessons}", nLessons.toString()))
+        languageBox.setOnClickListener {Utility.navigateTo(this, languagePage)}
 
         Utility.ridimensionamento(this, parentView)
         gallery.addView(view)
-
-        gallery.setOnClickListener{
-            Utility.navigateTo(this, languagePage)
-        }
     }
 }

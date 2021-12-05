@@ -8,6 +8,7 @@
     android:paddingRight="16dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/language_box"
         android:layout_width="320px"
         android:layout_height="350px"
         android:background="@drawable/language_icon_bg">

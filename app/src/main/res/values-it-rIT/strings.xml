@@ -6,4 +6,9 @@
     <string name="close_app">Chiudi l\'app</string>
     <string name="choose_language">Scegli il linguaggio</string>
     <string name="n_lessons">{n_lessons} lezioni</string>
+    <string name="choose_topic">Scegli un argomento</string>
+    <string name="java_introduction_name">Introduzione alla sintassi</string>
+    <string name="java_introduction_description">Imparare la sintassi</string>
+    <string name="java_comments_name">Commenti</string>
+    <string name="java_comments_description">Come scrivere i commenti e perché farlo</string>
 </resources>
