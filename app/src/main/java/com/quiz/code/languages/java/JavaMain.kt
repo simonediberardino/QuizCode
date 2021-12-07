@@ -28,18 +28,10 @@ class JavaMain : CustomActivity(){
         val topics: Array<Topic> = arrayOf(
             JavaIntroduction(),
             JavaComments(),
-            JavaIntroduction(),
-            JavaComments(),
-            JavaIntroduction(),
-            JavaComments(),
-            JavaIntroduction(),
-            JavaComments(),
-            JavaIntroduction(),
-            JavaComments(),
-            JavaIntroduction(),
-            JavaComments(),
-            JavaIntroduction(),
-            JavaComments())
+            JavaVarsAndDataTypes(),
+            JavaCasting(),
+            JavaStrings(),
+            JavaIfElse())
 
         topics.forEach{addTopic(it)}
     }

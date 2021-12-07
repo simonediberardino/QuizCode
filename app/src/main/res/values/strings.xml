@@ -10,4 +10,12 @@
     <string name="java_introduction_description">Understanding the syntax</string>
     <string name="java_comments_name">Comments</string>
     <string name="java_comments_description">How to write comments and why</string>
+    <string name="java_vars_name">Variables and data types</string>
+    <string name="java_vars_description">How to declare variables</string>
+    <string name="java_casting_name">Type casting</string>
+    <string name="java_casting_description">Assigning a value to a different type variable</string>
+    <string name="java_strings_name">Strings</string>
+    <string name="java_strings_description">How to store text</string>
+    <string name="java_ifelse_name">If and else statements</string>
+    <string name="java_ifelse_description">Logical conditions</string>
 </resources>
