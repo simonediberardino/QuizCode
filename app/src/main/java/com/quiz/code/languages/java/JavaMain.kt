@@ -4,17 +4,23 @@ import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import com.quiz.code.CustomActivity
-import com.quiz.code.R
-import com.quiz.code.Topic
-import com.quiz.code.Utility
-import kotlin.collections.ArrayList
+import com.quiz.code.*
 
-class JavaMain : CustomActivity(){
+
+open class JavaMain : LanguageActivity(){
+    override fun topics(): Array<Topic> {
+        return arrayOf(
+            JavaIntroduction(),
+            JavaComments(),
+            JavaVarsAndDataTypes(),
+            JavaCasting(),
+            JavaStrings(),
+            JavaIfElse())
+    }
+
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,19 +31,11 @@ class JavaMain : CustomActivity(){
     }
 
     private fun addTopics(){
-        val topics: Array<Topic> = arrayOf(
-            JavaIntroduction(),
-            JavaComments(),
-            JavaVarsAndDataTypes(),
-            JavaCasting(),
-            JavaStrings(),
-            JavaIfElse())
-
-        topics.forEach{addTopic(it)}
+        topics().forEach{addTopic(it)}
     }
 
     private fun addTopic(topic: Topic){
-        val parentLayoutId = R.id.java_main_layout
+        val parentLayoutId = R.id.topic_main_layout
         val parentViewId = R.id.parent
         val layoutToAddId = R.layout.single_topic
 
@@ -47,10 +45,15 @@ class JavaMain : CustomActivity(){
 
         val topicTitleTW = view.findViewById<TextView>(R.id.topic_title)
         val topicdescTW = view.findViewById<TextView>(R.id.topic_description)
+        val topicNTW = view.findViewById<TextView>(R.id.topic_n)
         val topicBox = view.findViewById<View>(parentViewId)
+
+        val lessonNumber = gallery.childCount + 1
 
         topicTitleTW.setText(topic.name)
         topicdescTW.setText(topic.description)
+        topicNTW.setText("$lessonNumber")
+
         topicBox.setOnClickListener { topic.start(this) }
 
         gallery.addView(view)

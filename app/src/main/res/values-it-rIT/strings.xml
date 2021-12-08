@@ -10,7 +10,7 @@
     <string name="java_introduction_name">Introduzione alla sintassi</string>
     <string name="java_introduction_description">Imparare la sintassi</string>
     <string name="java_comments_name">Commenti</string>
-    <string name="java_comments_description">Come scrivere i commenti e perché farlo</string>
+    <string name="java_comments_description">Come scrivere i commenti e perché</string>
     <string name="java_vars_name">Variabili e tipi di dati</string>
     <string name="java_vars_description">Imparare a dichiarare le variabili</string>
     <string name="java_casting_name">Casting</string>

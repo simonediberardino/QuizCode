@@ -11,6 +11,7 @@ import androidx.annotation.RequiresApi
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.quiz.code.languages.java.JavaMain
 import java.util.*
+import kotlin.collections.ArrayList
 
 class LearnMain : CustomActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
@@ -19,10 +20,10 @@ class LearnMain : CustomActivity() {
         setContentView(R.layout.activity_learn_main)
         super.onPageLoaded()
         addLanguage("Java", 0, JavaMain::class.java)
-        addLanguage("JavaScript", 0, MainActivity::class.java)
+        addLanguage("JavaScript", 0, JavaMain::class.java)
     }
 
-    fun addLanguage(languageNameStr: String, nLessons: Int, languagePage: Class<*>?){
+    fun addLanguage(languageNameStr: String, nLessons: Int, languagePage: Class<*>){
         val parentLayoutId = R.id.learn_main_layout
         val parentViewId = R.id.parent
         val layoutToAddId = R.layout.single_language
@@ -43,6 +44,8 @@ class LearnMain : CustomActivity() {
         languageIconView.setBackgroundResource(languageId)
         languageLessView.setText(getString(R.string.n_lessons).replace("{n_lessons}", nLessons.toString()))
         languageBox.setOnClickListener {Utility.navigateTo(this, languagePage)}
+
+        languagePage.getMethod("topics").run {  }
 
         Utility.ridimensionamento(this, parentView)
         gallery.addView(view)
