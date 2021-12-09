@@ -18,4 +18,12 @@
     <string name="java_strings_description">How to store text</string>
     <string name="java_ifelse_name">If and else statements</string>
     <string name="java_ifelse_description">Logical conditions</string>
+    <string name="java_switch_name">Switch statement</string>
+    <string name="java_switch_description">An alternative to if-else statements</string>
+    <string name="java_loops_name">Loops</string>
+    <string name="java_loops_description">For, while and do-while loops</string>
+    <string name="java_array_name">Arrays</string>
+    <string name="java_array_description">Multiple values in a single variable</string>
+    <string name="java_clob_name">Classes and objects</string>
+    <string name="java_clob_description">Understanding the OOP</string>
 </resources>

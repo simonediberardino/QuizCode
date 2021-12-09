@@ -12,6 +12,8 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 
 object Utility {
+    fun replaceTabsWithSpaces(code: String) = code.replace("\t", "    ")
+
     @RequiresApi(api = Build.VERSION_CODES.N)
     fun enableTopBar(c: AppCompatActivity) {
         val resId = c.resources.getIdentifier("topbar", "drawable", c.packageName)

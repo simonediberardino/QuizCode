@@ -11,15 +11,18 @@ import com.quiz.code.*
 
 
 open class JavaMain : LanguageActivity(){
-    override fun topics(): Array<Topic> {
-        return arrayOf(
+    override val topics: Array<Topic>
+        get() = arrayOf(
             JavaIntroduction(),
             JavaComments(),
             JavaVarsAndDataTypes(),
             JavaCasting(),
             JavaStrings(),
-            JavaIfElse())
-    }
+            JavaIfElse(),
+            JavaSwitch(),
+            JavaLoops(),
+            JavaArray(),
+            JavaClassesObjects())
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +34,7 @@ open class JavaMain : LanguageActivity(){
     }
 
     private fun addTopics(){
-        topics().forEach{addTopic(it)}
+        topics.forEach{addTopic(it)}
     }
 
     private fun addTopic(topic: Topic){

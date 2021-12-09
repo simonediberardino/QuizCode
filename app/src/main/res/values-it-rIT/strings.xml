@@ -19,4 +19,12 @@
     <string name="java_strings_description">Come memorizzare del testo</string>
     <string name="java_ifelse_name">Strutture if e else</string>
     <string name="java_ifelse_description">Condizioni logiche</string>
+    <string name="java_switch_name">Struttura switch</string>
+    <string name="java_switch_description">Un\'alternativa alla struttura if-else</string>
+    <string name="java_loops_name">Cicli</string>
+    <string name="java_loops_description">Clicli for, while e do-while</string>
+    <string name="java_array_name">Array</string>
+    <string name="java_array_description">Più valori in una singola variabile</string>
+    <string name="java_clob_name">Classi e oggetti</string>
+    <string name="java_clob_description">La programmazione OOP</string>
 </resources>
