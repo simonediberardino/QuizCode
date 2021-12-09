@@ -3,6 +3,7 @@ package com.quiz.code.languages.java
 import android.os.Build
 import android.os.Bundle
 import android.webkit.WebView
+import android.widget.TextView
 import androidx.annotation.RequiresApi
 import com.protectsoft.webviewcode.Codeview
 import com.protectsoft.webviewcode.Settings

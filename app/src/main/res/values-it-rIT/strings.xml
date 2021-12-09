@@ -4,6 +4,7 @@
     <string name="start_learning">Impara ora</string>
     <string name="quizzes">Quiz</string>
     <string name="close_app">Chiudi l\'app</string>
+    <string name="note">Fai attenzione:</string>
     <string name="choose_language">Scegli il linguaggio</string>
     <string name="n_lessons">{n_lessons} lezioni</string>
     <string name="choose_topic">Scegli un argomento</string>
@@ -27,4 +28,7 @@
     <string name="java_array_description">Più valori in una singola variabile</string>
     <string name="java_clob_name">Classi e oggetti</string>
     <string name="java_clob_description">La programmazione OOP</string>
+    <string name="java_introduction_t1">Ogni riga di codice che viene eseguita in Java deve essere scritta all\'interno di una <b>classe</b>.\n\nIl nome del file Java deve corrispondere al nome della classe, entrambi devono iniziare con una <b>lettera maiuscola</b>.\nIl <b>metodo main</b> contiene le prime istruzioni del nostro programma, capirai le parole chiave prima e dopo main in seguito.\n\nIl <b>metodo println</b> prende una stringa come parametro e la stampa nella tua console. Ecco qui un esempio su come scrivere un programma "hello world".</string>
+    <string name="java_introduction_t2">\n<b>Nota</b>: Le parentesi graffe segnano l\'inizio e la fine di un blocco di codice.\n<b>Nota</b>: Ogni istruzione di codice deve terminare con un punto e virgola.
+</string>
 </resources>
