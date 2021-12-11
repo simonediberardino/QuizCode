@@ -3,7 +3,6 @@ package com.quiz.code.languages.java
 import android.os.Build
 import android.os.Bundle
 import android.webkit.WebView
-import android.widget.TextView
 import androidx.annotation.RequiresApi
 import com.protectsoft.webviewcode.Codeview
 import com.protectsoft.webviewcode.Settings
@@ -26,7 +25,7 @@ class JavaIntroduction : Topic(TOPIC_SYNTAX_NAME, TOPIC_SYNTAX_DESCRIPTION, Java
     }
 
     fun initializePage(){
-        val codeView = findViewById<WebView>(R.id.java_intro_cw)
+    val codeView = findViewById<WebView>(R.id.java_intro_cw)
         var codeString = "" +
                 "class MyNewClass{\n" +
                 "\tpublic static void main(String[] args){\n" +
@@ -40,5 +39,13 @@ class JavaIntroduction : Topic(TOPIC_SYNTAX_NAME, TOPIC_SYNTAX_DESCRIPTION, Java
             .withCode(codeString)
             .setStyle(Settings.WithStyle.DARKULA)
             .into(codeView)
+    }
+
+    class JavaIntroductionTest : CustomActivity(){
+        @RequiresApi(Build.VERSION_CODES.N)
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+
+        }
     }
 }
