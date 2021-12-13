@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.PagerAdapter
 
-class CustomPagerAdapter(private val mContext: Context, private val nQuestions: Int) : PagerAdapter() {
+class CustomPagerAdapter(private val mContext: Context, private val topic: Array<Class<Topic>>, private val nQuestions: Int) : PagerAdapter() {
     private var collection: ViewGroup? = null
 
     override fun instantiateItem(collection: ViewGroup, position: Int): Any {
@@ -29,7 +29,7 @@ class CustomPagerAdapter(private val mContext: Context, private val nQuestions: 
         return view === `object`
     }
 
-    override fun getPageTitle(position: Int): String? {
+    override fun getPageTitle(position: Int): String {
         return mContext.getString(count)
     }
 }
