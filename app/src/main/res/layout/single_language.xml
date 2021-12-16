@@ -11,7 +11,7 @@
         android:id="@+id/language_box"
         android:layout_width="320px"
         android:layout_height="350px"
-        android:background="@drawable/language_icon_bg">
+        android:background="@drawable/orange_btn_icon">
 
         <TextView
             android:id="@+id/language_Name"

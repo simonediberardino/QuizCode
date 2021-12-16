@@ -31,27 +31,33 @@ object Utility {
         c.startActivity(i)
     }
 
-    // Ridimensiona i componenti in base alla dimensione dello schermo, NOTA: da utilizzare ogni qual volta si cambia la content view;
+    // Ridimensiona i componenti in base alla dimensione dello schermo;
     fun ridimensionamento(activity: AppCompatActivity, v: ViewGroup) {
         val displayMetrics = DisplayMetrics()
         activity.windowManager.defaultDisplay.getMetrics(displayMetrics)
         val baseHeight = 1920.0
         val height = displayMetrics.heightPixels.toDouble()
+
         for (i in 0 until v.childCount) {
             val vAtI = v.getChildAt(i)
             val curHeight = vAtI.layoutParams.height
             val curWidth = vAtI.layoutParams.width
-            val rapporto = height / baseHeight
-            if (curHeight > ViewGroup.LayoutParams.MATCH_PARENT) vAtI.layoutParams.height =
-                (curHeight * rapporto).toInt()
-            if (curWidth > ViewGroup.LayoutParams.MATCH_PARENT) vAtI.layoutParams.width =
-                (curWidth * rapporto).toInt()
+            val ratio = height / baseHeight
+
+            if (curHeight > ViewGroup.LayoutParams.MATCH_PARENT)
+                vAtI.layoutParams.height = (curHeight * ratio).toInt()
+
+            if (curWidth > ViewGroup.LayoutParams.MATCH_PARENT)
+                vAtI.layoutParams.width = (curWidth * ratio).toInt()
+
             if (vAtI is TextView) {
                 val curSize = vAtI.textSize.toInt()
-                val newSize = (curSize * rapporto).toInt()
+                val newSize = (curSize * ratio).toInt()
                 vAtI.setTextSize(TypedValue.COMPLEX_UNIT_PX, newSize.toFloat())
             }
+
             vAtI.requestLayout()
+
             if (vAtI is ViewGroup) {
                 ridimensionamento(activity, vAtI)
             }

@@ -15,4 +15,6 @@
     <color name= "gold">#FFD700</color>
     <color name="lightgreen">#74FF44</color>
     <color name="darkgreen">#03D400</color>
+    <color name="bluacqua">#256d7b</color>
+    <color name="aquamarine">#33ffba</color>
 </resources>
