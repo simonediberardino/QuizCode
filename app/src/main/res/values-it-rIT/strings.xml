@@ -8,6 +8,12 @@
     <string name="choose_language">Scegli il linguaggio</string>
     <string name="n_lessons">{n_lessons} lezioni</string>
     <string name="choose_topic">Scegli un argomento</string>
+    <string name="correct_answer">Risposta corretta!</string>
+    <string name="wrong_answer">Risposta sbagliata!</string>
+    <string name="summary">Riepilogo</string>
+    <string name="wrong_answer_desc">Risposta corretta: {answer}</string>
+    <string name="correct_answer_desc">Risposta corretta!</string>
+    <string name="next_question">Prossima domanda</string>
     <string name="java_introduction_name">Introduzione alla sintassi</string>
     <string name="java_introduction_description">Imparare la sintassi</string>
     <string name="java_comments_name">Commenti</string>

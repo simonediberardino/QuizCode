@@ -17,4 +17,6 @@
     <color name="darkgreen">#03D400</color>
     <color name="bluacqua">#256d7b</color>
     <color name="aquamarine">#33ffba</color>
+    <color name="lightred">#FE775B</color>
+    <color name="darkred">#FC3232</color>
 </resources>
