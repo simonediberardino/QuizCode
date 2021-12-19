@@ -17,7 +17,7 @@ abstract class QuizQuestion{
     abstract val topic: Class<*>
 
     abstract fun showQuestion(layout: ViewGroup)
-    abstract fun checkAnswer(answer: Any)
+    abstract fun checkAnswer(correctAnswer: Any, answer: Any)
 
     @RequiresApi(Build.VERSION_CODES.M)
     open fun onAnswerCorrect(answer: Any?){
@@ -61,5 +61,9 @@ abstract class QuizQuestion{
         dialogCloseBTN.setOnClickListener{ dialog.dismiss() }
 
         dialog.show()
+    }
+
+    fun getTopicTitle(): String? {
+        return (topic as Class<Topic>).newInstance().name
     }
 }
