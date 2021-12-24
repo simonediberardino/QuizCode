@@ -5,15 +5,15 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.RequiresApi
 import androidx.viewpager.widget.ViewPager
-import com.quiz.code.CustomActivity
 import com.quiz.code.CustomPagerAdapter
 import com.quiz.code.R
 import com.quiz.code.Topic
 
-private val TOPIC_CASTING_NAME = CustomActivity.lastContext?.getString(R.string.java_casting_name)
-private val TOPIC_CASTING_DESCRIPTION = CustomActivity.lastContext?.getString(R.string.java_casting_description)
+class JavaCasting : Topic(
+    lastContext?.getString(R.string.java_casting_name),
+    lastContext?.getString(R.string.java_casting_description),
+    JavaCasting::class.java) {
 
-class JavaCasting : Topic(TOPIC_CASTING_NAME, TOPIC_CASTING_DESCRIPTION, JavaCasting::class.java) {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

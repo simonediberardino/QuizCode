@@ -11,10 +11,11 @@ import com.quiz.code.R
 import com.quiz.code.Topic
 import com.quiz.code.Utility
 
-private val TOPIC_SYNTAX_NAME = CustomActivity.lastContext?.getString(R.string.java_introduction_name)
-private val TOPIC_SYNTAX_DESCRIPTION = CustomActivity.lastContext?.getString(R.string.java_introduction_description)
+class JavaIntroduction : Topic(
+    lastContext?.getString(R.string.java_introduction_name),
+    lastContext?.getString(R.string.java_introduction_description),
+    JavaIntroduction::class.java) {
 
-class JavaIntroduction : Topic(TOPIC_SYNTAX_NAME, TOPIC_SYNTAX_DESCRIPTION, JavaIntroduction::class.java) {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
